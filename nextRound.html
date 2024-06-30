@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="topicclass">
+      <h1>First Aid and Health</h1>
+    </div>
+    <div id="box">
+      <h1 id="quesBox">Loading Question...</h1>
+      <div class="row">
+
+        <input class="options" id="option1" type="radio" value="a" name="option" />
+        <label id="colorch" for="option1">option1</label>
+      </div>
+
+      <div class="row">
+
+        <input class="options" id="option2" type="radio" value="b" name="option" />
+        <label id="colorch" for="option2">option2</label>
+      </div>
+      <div class="row">
+
+        <input class="options" id="option3" type="radio" value="c" name="option" />
+        <label id="colorch" for="option3">option3</label>
+      </div>
+      <div class="row">
+
+        <input class="options" id="option4" type="radio" value="d" name="option" />
+        <label id="colorch" for="option4">option4</label>
+      </div>
+
+
+    </div>
+    <div class="allbtndiv">
+      <button id="btn" onclick="Nextque()">Next</button>
+    </div>
+  </div>
+
+  <script>const questions = [{
+      'que': 'What is the name of the injury in which the muscles get stretched do you know from?',
+      'a': "Strain",
+      'b': "Muscle bridge",
+      'c': "Contusion",
+      'd': "Sprain",
+      'e': "Next Question",
+      'correct': 'a'
+
+    }
+      ,
+    {
+      'que': 'Which of the following first aid is given to reduce body pain?',
+      'a': "Sun bath",
+      'b': "Sona bath",
+      'c': "Steam bath",
+      'd': "Cold bath",
+      'e': "Next Question",
+      'correct': 'd'
+    },
+
+    {
+      'que': 'What will you do if a person drowns in water?',
+      'a': "Will take out water by lying on the stomach",
+      'b': "Will give water to drink",
+      'c': "Will give medicine",
+      'd': "None of the above",
+      'e': "Next Question",
+      'correct': 'a'
+
+    },
+    {
+      'que': 'What is the basic purpose of first Aid?',
+      'a': "Treatment",
+      'b': "Calling the doctor",
+      'c': "Saving life",
+      'd': "To take the patient to the hospital",
+      'e': "Next Question",
+      'correct': 'c'
+    },
+    {
+      'que': 'What first aid is given to reduce internal bleeding?',
+      'a': "Ice bag",
+      'b': "Wrapping in a round cloth",
+      'c': "Baking by radiation",
+      'd': "None of the above",
+      'e': "Next Question",
+      'correct': 'a'
+    },
+
+
+    //new questions
+
+    {
+      'que': 'Hematoma is?',
+      'a': "from disease",
+      'b': "from injury",
+      'c': "by resting",
+      'd': "from sleeping",
+      'e': "Next Question",
+      'correct': 'b'
+    },
+
+    {
+      'que': 'There is a greater possibility of lifting a load with a jerk:',
+      'a': "to disintegrate",
+      'b': "bone spur",
+      'c': "Muscle strain",
+      'd': "Sprain",
+      'e': "Next Question",
+      'correct': 'c'
+    },
+    {
+      'que': 'By what name is the treatment done through water known?',
+      'a': "Electrotherapy",
+      'b': "Waxtherapy",
+      'c': "Hydrotherapy",
+      'd': "Isotherapy",
+      'e': "Next Question",
+      'correct': 'c'
+    },
+    {
+      'que': 'What should be in first aid box?',
+      'a': "Straps",
+      'b': "Medicine",
+      'c': "Scissors",
+      'd': "All of the above",
+      'e': "Next Question",
+      'correct': 'd'
+    },
+    {
+      'que': 'Is breathing controlled?',
+      'a': "Through lungs",
+      'b': " Through trachea",
+      'c': "Through Medulla",
+      'd': " Through intercostal",
+      'e': "Submit",
+      'correct': 'c'
+    },
+    ]
+
+
+    let index = 0;
+    let total = questions.length;
+    let right = 0, wrong = 0;
+    const quesBox = document.getElementById("quesBox")
+    const optionInputs = document.querySelectorAll(".options")
+
+
+    const loadQuestion = () => {
+      if (index === total) {
+        return endQuiz()
+      }
+      reset();
+      const data = questions[index]
+      quesBox.innerText = ` ${index + 1})${data.que}`;
+      optionInputs[0].nextElementSibling.innerText = data.a;
+      optionInputs[1].nextElementSibling.innerText = data.b;
+      optionInputs[2].nextElementSibling.innerText = data.c;
+      optionInputs[3].nextElementSibling.innerText = data.d;
+      document.getElementById('btn').innerText = data.e;
+    }
+
+
+    const Nextque = () => {
+      const data = questions[index]
+      const ans = getAnswer()
+      console.log(ans, data.correct)
+      if (ans === data.correct) {
+        right++;
+
+      } else {
+        wrong++;
+      }
+      index++;
+      reset();
+      loadQuestion();
+      return;
+
+    }
+
+    const getAnswer = () => {
+      let answer;
+      optionInputs.forEach(
+        (input) => {
+          if (input.checked) {
+            console.log(input.value)
+            answer = input.value;
+            //    console.log("yes")
+          }
+          // console.log("no")
+
+
+
+        }
+      )
+      return answer;
+    }
+
+
+    const reset = () => {
+      optionInputs.forEach(
+        (input) => {
+          input.checked = false;
+        }
+      )
+
+    }
+
+    const endQuiz = () => {
+      document.getElementById('box').innerHTML = `
+        <div class="heading"<h3><span class="Thankheading">Thankyou</span><br><span class="Paragraph"> For Playing The quiz</span></h3><p class="result">Your Result</p>
+        <h2>${right}/${total} are correct </h2><br><a class='nextRound' href="index.html">Back</a>
+        <h6 class="aboutme">-Developed by Shiv Kumar</h6>`
+      document.getElementById('box').style.backgroundColor = '#33ff99';
+      document.getElementById('box').style.boxShadow = '4px 3px 8px 2px black';
+      document.getElementById('box').style.width = '100%';
+      document.getElementById('box').style.height = '80vh';
+      document.getElementById('box').style.margin = '0px';
+      document.getElementById('box').style.padding = '0px';
+      document.getElementById('box').style.display = 'flex';
+      document.getElementById('box').style.justifyContent = 'center';
+      document.getElementById('box').style.alignItems = 'center';
+      document.getElementById('btn').style.display = 'none';
+    }
+
+    loadQuestion();
+
+  </script>
+
+</body>
+
+</html>
