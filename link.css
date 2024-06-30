@@ -1,0 +1,39 @@
+body {
+margin: 0px;
+padding: 0px;
+background-image: url(images/desktop-wallpaper-blue-back-to-school-study-table-mobile-phone-vector-iphone-and-mobile-phone-study-mobile.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.headerdiv{
+  display: flex;
+  width: 100%;
+   justify-content: center;
+   align-items: center;
+}
+.logodiv{
+  width: 20%;
+  padding: 1.5%;
+  padding-left: 2%;
+  
+}
+.logodiv img{
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.listitem{
+  width: 80%;
+  padding-right: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.listitem li{
+  list-style: none;
+}
+
+.listitem a{
+  text-decoration: none;
+}

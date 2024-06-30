@@ -1,0 +1,241 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.topicclass{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100;
+  border-bottom: 2px solid gray;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:  #4d88ff;
+
+}
+#box{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: aqua;
+  width: 100%;
+  height: 60vh;
+  
+}
+#box label{
+     color: black;
+     font-size: 20px;
+}
+.row{
+  margin-top: 40px;
+  padding: 0%;
+}
+.allbtndiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cyan;
+}
+
+#btn{
+  width: 32%;
+  height: 3rem;
+  font-size: 25px;
+  font-weight: bold;
+ border: none;
+ box-shadow: 2px 2px 4px 2px;
+  background-color: greenyellow;
+  border-radius: 10px;
+}
+
+#quesBox {
+  font-size: 28px;
+}
+.Thankheading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  #0df133;
+  color: rgb(255, 0, 0);
+
+  border-radius: 15px;
+  font-size: 50px;
+  font-weight: 800;
+  width: auto;
+  box-shadow: 1px 2px 4px 1px;
+  font-family: "DM Serif Text", serif;
+}
+
+.Paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  background-color: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 19px;
+  border: 1px solid black;
+  box-shadow: 0.7px 0.57px 1px 0.87px gray;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 2px 4px 0px gray;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  background-color: yellow;
+  box-shadow: 2px 1px 3px 3px gray;
+  padding: 20px;
+  width: 10rem;
+  margin: 90px;
+  border-radius: 15px;
+  font-family: Arial;
+}
+
+.result{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 25px;
+       color: blue;
+}
+
+h6 {
+  display: block;
+  justify-content: end;
+  align-items: end;
+  font-size: 15px;
+  color: blue;
+  text-shadow: 1px 0.5px 2px black;
+}
+
+.aboutme{
+display: flex;
+justify-content: end;
+align-items: end;
+color: gray;
+opacity: 0.5;
+}
+.nextRound{
+  color: red;
+  text-decoration: none;
+  border: 2px solid none;
+  padding: 15px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
+}
+
+ @media only screen and (max-width: 600px) {
+
+  /* For mobile: */
+  body {
+    background-color: cyan;
+
+  }
+  .topicclass{
+
+
+   border-bottom: 2px solid black;
+   border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #4d88ff;
+  
+  }
+
+  .row{
+    margin-top: 20px;
+    padding: 0%;
+  }
+
+  #btn {
+      font-size: 20px;
+      width: 35%;
+      height: 3rem;
+  }
+
+  #box label{
+    color: black;
+    font-size: 17px;
+}
+#quesBox {
+  font-size: 25px;
+}
+  .Thankheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  none;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 40px;
+    font-weight: 800;
+    width: 100%;
+    margin-bottom: 4%;
+    box-shadow: 1px 2px 4px 1px red;
+    font-family: "DM Serif Text", serif;
+  }
+
+  .Paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    background-color: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 19px;
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 0.7px 0.57px 1px 0.87px gray;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 4px 0px gray;
+    align-items: center;
+    color: black;
+    font-size: 18px;
+    background-color: yellow;
+    box-shadow: 2px 1px 3px 3px gray;
+    padding: 20px;
+    width: 10rem;
+    border-radius: 15px;
+    font-family: Arial;
+  }
+
+  .result{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 25px;
+         color: blue;
+  }
+
+  h6 {
+    display: block;
+    justify-content: end;
+    align-items: end;
+    font-size: 15px;
+    color: blue;
+    text-shadow: 1px 0.5px 2px black;
+  }
+}
+.aboutme{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
